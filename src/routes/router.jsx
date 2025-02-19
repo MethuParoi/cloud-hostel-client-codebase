@@ -23,6 +23,8 @@ import Meals from "../pages/Meals";
 import Checkout from "../pages/Checkout";
 import UpcomingMeals from "../pages/UpcomingMeals";
 import UpcomingMealDetails from "../pages/UpcomingMealDetails";
+import AdminOverview from "../pages/dashboard/admin/AdminOverview";
+import UserOverview from "../pages/dashboard/user/UserOverview";
 
 const router = createBrowserRouter([
   {
@@ -85,7 +87,10 @@ const router = createBrowserRouter([
         path: "my-reviews",
         element: <MyReview />,
       },
-
+      {
+        path: "overview",
+        element: <UserOverview />,
+      },
       {
         path: "payment-history",
         element: (
@@ -113,7 +118,6 @@ const router = createBrowserRouter([
     ],
   },
   // admin dashboard routes
-  //TODO: add admin route checker
   {
     path: "/dashboard",
     element: <Dashboard />,
@@ -122,7 +126,10 @@ const router = createBrowserRouter([
         path: "add-meal",
         element: <AddMeal />,
       },
-
+      {
+        path: "overview",
+        element: <AdminOverview />,
+      },
       {
         path: "profile",
         element: (

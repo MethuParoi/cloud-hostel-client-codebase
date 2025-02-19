@@ -66,6 +66,15 @@ const Drawer = () => {
             // admin menubar
             <>
               <li
+                onClick={() => navigate("/dashboard/overview")}
+                className={getLinkClass("/dashboard/overview")}
+              >
+                <div className="flex items-center justify-start gap-x-4">
+                  <CgProfile className="text-red-300 text-3xl" />
+                  Overview
+                </div>
+              </li>
+              <li
                 onClick={() => navigate("/dashboard/profile")}
                 className={getLinkClass("/dashboard/profile")}
               >
@@ -132,6 +141,15 @@ const Drawer = () => {
           ) : (
             // user menubar
             <>
+              <li
+                onClick={() => navigate("/dashboard/overview")}
+                className={getLinkClass("/dashboard/overview")}
+              >
+                <div className="flex items-center justify-start gap-x-4">
+                  <CgProfile className="text-red-300 text-3xl" />
+                  Overview
+                </div>
+              </li>
               <li
                 onClick={() => navigate("/dashboard/profile")}
                 className={getLinkClass("/dashboard/profile")}
