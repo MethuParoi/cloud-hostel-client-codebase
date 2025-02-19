@@ -10,7 +10,7 @@ import Features from "../components/home/Features";
 
 const Home = () => {
   return (
-    <div className="md:max-w-[780px] lg:max-w-[1000px] xl:max-w-[1200px] mx-auto py-10 px-2">
+    <div className="md:max-w-[780px] lg:max-w-[1000px] xl:max-w-[1200px] mx-auto mt-28 sm:mt-36 pb-10 px-2">
       <Helmet>
         <title>CloudHostel | Home</title>
       </Helmet>

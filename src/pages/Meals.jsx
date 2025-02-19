@@ -49,7 +49,7 @@ const Meals = () => {
 
   const { isLoading, featuredMeal, error, refetch } = useFeaturedMeal("all");
   return (
-    <div className="md:max-w-[780px] lg:max-w-[1000px] xl:max-w-[1200px] mx-auto pb-10 px-5">
+    <div className="md:max-w-[780px] lg:max-w-[1000px] xl:max-w-[1200px] mx-auto pb-10 px-5 mt-24">
       <p className=" text-primary dark:text-gray-400 text-3xl sm:text-5xl  font-semibold text-center nunitoSans-font border-b-2 border-primary dark:border-gray-400 w-[300px] sm:w-[350px] mx-auto mt-5 mb-10">
         {filteredMeal?.length != 0 ? "Searched Meals" : "All Meals"}
       </p>

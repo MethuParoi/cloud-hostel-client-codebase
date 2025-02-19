@@ -55,7 +55,7 @@ function Navbar({ toggleTheme, currentTheme }) {
   }, [axiosSecure, user?.email]);
 
   return (
-    <div className="navbar bg-secondary pr-6">
+    <div className="navbar bg-secondary pr-6 fixed z-50 top-0">
       <div className="navbar-start">
         <div className="dropdown z-20">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
