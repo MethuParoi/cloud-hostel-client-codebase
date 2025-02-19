@@ -5,6 +5,7 @@ import Tabs from "../components/home/Tabs";
 import MembershipSection from "../components/home/MembershipSection";
 import HospitalitySection from "../components/home/Hospitality";
 import WhyChooseUsSection from "../components/home/WhyChooseUs";
+import Testimonials from "../components/home/Testimonials";
 
 const Home = () => {
   return (
@@ -25,6 +26,8 @@ const Home = () => {
       <HospitalitySection />
       {/* Why Choose Us section */}
       <WhyChooseUsSection />
+      {/* Our Testimonials section */}
+      <Testimonials />
       {/* Our Facilities section */}
       <OurFacilities />
     </div>
