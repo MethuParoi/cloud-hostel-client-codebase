@@ -6,6 +6,7 @@ import MembershipSection from "../components/home/MembershipSection";
 import HospitalitySection from "../components/home/Hospitality";
 import WhyChooseUsSection from "../components/home/WhyChooseUs";
 import Testimonials from "../components/home/Testimonials";
+import Features from "../components/home/Features";
 
 const Home = () => {
   return (
@@ -26,10 +27,12 @@ const Home = () => {
       <HospitalitySection />
       {/* Why Choose Us section */}
       <WhyChooseUsSection />
-      {/* Our Testimonials section */}
-      <Testimonials />
       {/* Our Facilities section */}
       <OurFacilities />
+      {/*Features section */}
+      <Features />
+      {/* Our Testimonials section */}
+      <Testimonials />
     </div>
   );
 };
