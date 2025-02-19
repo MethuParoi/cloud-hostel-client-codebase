@@ -6,6 +6,7 @@ import { FaMoon } from "react-icons/fa6";
 import { MdWbSunny } from "react-icons/md";
 import logo from "../../assets/logo/logo.png";
 import { IoNotificationsCircle } from "react-icons/io5";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 function Navbar({ toggleTheme, currentTheme }) {
   const location = useLocation();
@@ -40,6 +41,18 @@ function Navbar({ toggleTheme, currentTheme }) {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [menuRef]);
+
+  //check admin
+  const [isAdmin, setIsAdmin] = useState(false);
+  const axiosSecure = useAxiosSecure();
+  useEffect(() => {
+    axiosSecure.get(`/user/check-admin/${user?.email}`).then((res) => {
+      console.log(res);
+      if (res.data.admin === true) {
+        setIsAdmin(true);
+      }
+    });
+  }, [axiosSecure, user?.email]);
 
   return (
     <div className="navbar bg-secondary pr-6">
@@ -107,22 +120,44 @@ function Navbar({ toggleTheme, currentTheme }) {
                 Upcoming Meals
               </button>
             </li>
-            {/* <li>
-              <button
-                onClick={() => navigate("/manage-food")}
-                className="text-neutral"
-              >
-                Manage Food
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => navigate("/food-requests")}
-                className="text-neutral"
-              >
-                Food Requests
-              </button>
-            </li> */}
+            {user && (
+              <>
+                <li>
+                  <button
+                    onClick={() => navigate("/dashboard/profile")}
+                    className={`text-neutral ${
+                      location.pathname === "/dashboard/profile" && "active"
+                    }`}
+                  >
+                    Dashboard
+                  </button>
+                </li>
+                {isAdmin ? (
+                  <li>
+                    <button
+                      onClick={() => navigate("/dashboard/add-meal")}
+                      className={`text-neutral ${
+                        location.pathname === "/dashboard/add-meal" && "active"
+                      }`}
+                    >
+                      Add Meal
+                    </button>
+                  </li>
+                ) : (
+                  <li>
+                    <button
+                      onClick={() => navigate("/dashboard/requested-meals")}
+                      className={`text-neutral ${
+                        location.pathname === "/dashboard/requested-meals" &&
+                        "active"
+                      }`}
+                    >
+                      Requested Meal
+                    </button>
+                  </li>
+                )}
+              </>
+            )}
           </ul>
         </div>
         <Link
@@ -166,26 +201,44 @@ function Navbar({ toggleTheme, currentTheme }) {
               Upcoming Meals
             </button>
           </li>
-          {/* <li>
-            <button
-              onClick={() => navigate("/manage-food")}
-              className={`text-neutral ${
-                location.pathname === "/manage-food" && "active"
-              }`}
-            >
-              Manage Food
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => navigate("/food-requests")}
-              className={`text-neutral ${
-                location.pathname === "/food-requests" && "active"
-              }`}
-            >
-              Food Requests
-            </button>
-          </li> */}
+          {user && (
+            <>
+              <li>
+                <button
+                  onClick={() => navigate("/dashboard/profile")}
+                  className={`text-neutral ${
+                    location.pathname === "/dashboard/profile" && "active"
+                  }`}
+                >
+                  Dashboard
+                </button>
+              </li>
+              {isAdmin ? (
+                <li>
+                  <button
+                    onClick={() => navigate("/dashboard/add-meal")}
+                    className={`text-neutral ${
+                      location.pathname === "/dashboard/add-meal" && "active"
+                    }`}
+                  >
+                    Add Meal
+                  </button>
+                </li>
+              ) : (
+                <li>
+                  <button
+                    onClick={() => navigate("/dashboard/requested-meals")}
+                    className={`text-neutral ${
+                      location.pathname === "/dashboard/requested-meals" &&
+                      "active"
+                    }`}
+                  >
+                    Requested Meal
+                  </button>
+                </li>
+              )}
+            </>
+          )}
         </ul>
       </div>
       <div className="navbar-end relative">
