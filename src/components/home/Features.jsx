@@ -5,8 +5,8 @@ import img4 from "../../assets/hero/living.jpg";
 
 const Features = () => {
   return (
-    <div className="xl:max-w-[1300px] mx-auto mt-10 mb-20">
-      <h2 className="text-3xl font-semibold text-center border-b-2 border-gray-500 w-[320px] mx-auto">
+    <div className="xl:max-w-[1300px] mx-auto mt-10">
+      <h2 className="text-primary dark:text-gray-400 sm:text-5xl text-2xl font-semibold text-center nunitoSans-font border-b-2 border-primary dark:border-gray-400 w-[200px] sm:w-[425px] mx-auto">
         Choose Your Room
       </h2>
 

@@ -2,7 +2,7 @@ import bgImg from "../../assets/hero/living.jpg";
 const WhyChooseUsSection = () => {
   return (
     <div
-      className="xl:max-w-[1300px] mx-auto flex md:flex-row items-center md:justify-around flex-col-reverse gap-y-8 md:gap-y-0 pt-6 pb-16 md:pt-16"
+      className="xl:max-w-[1300px] mx-auto flex md:flex-row items-center md:justify-around flex-col-reverse gap-y-8 md:gap-y-0 pt-6 pb-10 md:pt-10"
       id="donation-section"
     >
       <div className="w-[90vw] md:w-[40vw]">

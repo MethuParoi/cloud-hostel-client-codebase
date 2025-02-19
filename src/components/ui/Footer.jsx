@@ -55,7 +55,7 @@ function Footer() {
       <div className="mt-4 ">
         <hr className="w-[90vw] h-2" />
         <p className="text-center text-neutral">
-          &copy; 2024 CloudHostel. All rights reserved.
+          &copy; 2025 CloudHostel. All rights reserved.
         </p>
       </div>
     </div>

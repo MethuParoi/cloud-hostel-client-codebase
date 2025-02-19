@@ -5,7 +5,7 @@ import img2 from "../../assets/hero/testimonials_02.jpg";
 const Testimonials = () => {
   return (
     <div
-      className="xl:max-w-[1300px] mx-auto flex lg:flex-row items-center lg:gap-x-10 md:justify-around flex-col-reverse gap-y-6 lg:gap-y-0 py-16 dark:text-gray-200"
+      className="xl:max-w-[1300px] mx-auto flex lg:flex-row items-center lg:gap-x-10 md:justify-around flex-col-reverse gap-y-6 lg:gap-y-0 pt-4 pb-16 dark:text-gray-200"
       id="donation-section"
     >
       <div className="w-[90vw] lg:w-[34vw]">
@@ -21,7 +21,7 @@ const Testimonials = () => {
         <div className="flex justify-end items-center mt-5">
           <div className="flex flex-col items-end">
             <p className="text-gray-700 dark:text-gray-200 font-semibold mr-3 text-2xl">
-              Ann Peterson
+              Emily Watson
             </p>
             <p className="nunitoSans-font text-secondary dark:text-gray-400 font-semibold text-3xl mr-3">
               Border
@@ -48,7 +48,7 @@ const Testimonials = () => {
         <div className="flex justify-end items-center mt-5">
           <div className="flex flex-col items-end">
             <p className="text-gray-700 dark:text-gray-200 font-semibold mr-3 text-2xl">
-              John Doe
+              Anderson Smith
             </p>
             <p className="nunitoSans-font text-secondary dark:text-gray-400 font-semibold text-3xl mr-3">
               Border

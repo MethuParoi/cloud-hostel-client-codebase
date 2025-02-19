@@ -53,7 +53,7 @@ const OurFacilities = () => {
     },
   ];
   return (
-    <div className="my-10">
+    <div className="mt-6 mb-16">
       <p className=" text-primary dark:text-gray-400 sm:text-5xl text-2xl font-semibold text-center nunitoSans-font border-b-2 border-primary dark:border-gray-400 w-[200px] sm:w-[300px] mx-auto">
         Our Facilities
       </p>

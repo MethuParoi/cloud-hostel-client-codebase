@@ -48,7 +48,7 @@ const FacilityCard = ({ title, type }) => {
   };
 
   return (
-    <div className="w-36 sm:w-44 h-48 bg-secondary opacity-85 flex flex-col items-center justify-center gap-y-5 rounded-2xl">
+    <div className="w-36 sm:w-44 h-48 bg-gradient-to-r from-blue-400 to-blue-600 opacity-85 flex flex-col items-center justify-center gap-y-5 rounded-2xl">
       <div className="h-24 w-24 rounded-full bg-gray-100 flex items-center justify-center">
         {renderIcon()}
       </div>
